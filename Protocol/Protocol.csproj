@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6997517-29B4-4601-AADD-400D1D540E48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameProtocol</RootNamespace>
+    <AssemblyName>Protocol</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\SpaceNet\Assets\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="constans\BuildData.cs" />
+    <Compile Include="constans\HeroData.cs" />
+    <Compile Include="constans\ISkill.cs" />
+    <Compile Include="constans\SkillData.cs" />
+    <Compile Include="constans\SkillProcessMap.cs" />
+    <Compile Include="constans\Skill\SkillAttack.cs" />
+    <Compile Include="dto\AccountInfoDTO.cs" />
+    <Compile Include="dto\CharacterModel.cs" />
+    <Compile Include="dto\DefencerModel.cs" />
+    <Compile Include="dto\explore\AbsActorModel.cs" />
+    <Compile Include="dto\explore\AttackDTO.cs" />
+    <Compile Include="dto\explore\DamageDTO.cs" />
+    <Compile Include="dto\explore\EnterDTO.cs" />
+    <Compile Include="dto\explore\ExploreRoomModel.cs" />
+    <Compile Include="dto\explore\MoveDTO.cs" />
+    <Compile Include="dto\explore\PlayerModel.cs" />
+    <Compile Include="dto\fight\AttackDTO.cs" />
+    <Compile Include="dto\fight\DamageDTO.cs" />
+    <Compile Include="dto\fight\MoveDTO.cs" />
+    <Compile Include="dto\fight\SkillAtkModel.cs" />
+    <Compile Include="dto\InputDTO.cs" />
+    <Compile Include="dto\ModModel.cs" />
+    <Compile Include="dto\SolarDTO.cs" />
+    <Compile Include="dto\SpaceshipModel.cs" />
+    <Compile Include="dto\WeaponModel.cs" />
+    <Compile Include="FightProtocol.cs" />
+    <Compile Include="dto\fight\AbsFightModel.cs" />
+    <Compile Include="dto\fight\FightBuildModel.cs" />
+    <Compile Include="dto\fight\FightPlayerModel.cs" />
+    <Compile Include="dto\fight\FightRoomModel.cs" />
+    <Compile Include="dto\fight\FightSkill.cs" />
+    <Compile Include="dto\SelectModel.cs" />
+    <Compile Include="dto\SelectRoomDTO.cs" />
+    <Compile Include="MatchProtocol.cs" />
+    <Compile Include="dto\UserDTO.cs" />
+    <Compile Include="LoginProtocol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol.cs" />
+    <Compile Include="SelectProtocol.cs" />
+    <Compile Include="ExploreProtocol.cs" />
+    <Compile Include="UserProtocol.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
